@@ -1,4 +1,4 @@
-# Interia Voice AI Assistant
+# Multi Agent Voice System For Interia
 
 This project is a voice-enabled AI assistant designed for luxury interior design firm **Interia**. It captures voice input, interprets it using OpenAI, and stores qualified leads in Airtable. It also optionally uses **FAISS** to retrieve relevant past project examples based on user queries.
 
