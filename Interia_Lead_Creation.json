@@ -1,0 +1,254 @@
+{
+  "name": "Interia Lead Creation",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "8dfa7758-51d8-413c-bfb7-ece7644246c7",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5eec4e79-8d63-4d2a-a98f-96fcea2d6de8",
+              "name": "Name",
+              "value": "Sumit Arora",
+              "type": "string"
+            },
+            {
+              "id": "4350d6f4-42eb-498a-829a-317ed971db46",
+              "name": "Location",
+              "value": "chandigarh",
+              "type": "string"
+            },
+            {
+              "id": "e4d13ed2-8e68-4ffb-884f-8c0caec1835e",
+              "name": "Budget",
+              "value": "50 lakh",
+              "type": "string"
+            },
+            {
+              "id": "76bb274b-4f67-4bf5-a645-038adb4d8550",
+              "name": "Project Type",
+              "value": "Bedroom",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ],
+      "id": "9bd8acad-b785-473b-9d4c-f060bef4c8ec",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appSOuyzkbhkj4I4f",
+          "mode": "list",
+          "cachedResultName": "Interia Leads",
+          "cachedResultUrl": "https://airtable.com/appSOuyzkbhkj4I4f"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblSwvsJlPLmujiJT",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appSOuyzkbhkj4I4f/tblSwvsJlPLmujiJT"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Attempt": 0,
+            "Name": "Sumit arora",
+            "Status": "In-Progress",
+            "Budget": "50 lakh",
+            "Project Type": "Bedroom",
+            "Location": "chandigarh"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Notes",
+              "displayName": "Notes",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Assignee",
+              "displayName": "Assignee",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Todo",
+                  "value": "Todo"
+                },
+                {
+                  "name": "Done",
+                  "value": "Done"
+                },
+                {
+                  "name": "In-Progress",
+                  "value": "In-Progress"
+                },
+                {
+                  "name": "New",
+                  "value": "New"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Attempt",
+              "displayName": "Attempt",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Budget",
+              "displayName": "Budget",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Project Type",
+              "displayName": "Project Type",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Location",
+              "displayName": "Location",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "3c43978f-239d-4099-af5e-5a99a724d072",
+      "name": "Airtable",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "T5E1DR6aiONR6j4v",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "cbdd670a-e3c4-45f5-9c05-2f2e0d40decc",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "438bc1013cb2a4ddd09cf6c372b891ef334bdc150da1b940de57fff4dafaf9a3"
+  },
+  "id": "9TlaU9459eyZXRx9",
+  "tags": []
+}
